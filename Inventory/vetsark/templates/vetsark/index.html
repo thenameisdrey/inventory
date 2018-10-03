@@ -1,0 +1,35 @@
+{% extends 'vetsark/base.html' %}
+{% block content %}
+
+<div class="jumbotron text-center mdb-color lighten-2 white-text z-depth-2">
+        <div class="container">
+          <h1>Welcome!</h1><br>
+          <button type="button" class="btn btn-outline-white">Register <i class="fa fa-diamond ml-1"></i></button>
+          <button type="button" class="btn btn-outline-white">Sign In <i class="fa fa-download ml-1"></i></button>      
+        </div>
+      </div>
+       
+  </header>
+<section>
+ <div class="container">
+   <div class="row">
+     <div class="col-sm-3" id="stock-box">
+       <a href="{% url 'stock' %}"><h2>Stock</h2></a>
+     </div>
+
+     <div class="col-sm" id="purchase-box">
+        <a href=""><h2>Purchase</h2></a>
+      </div>
+
+      <div class="col-sm" id="sales-box">
+          <a href=""><h2>Sales</h2></a>
+      </div>
+
+      <div class="col-sm" id="patient-box">
+          <a href=""><h2>Report</h2></a>
+        </div>
+   </div>
+ </div>
+</section>
+
+{% endblock %}

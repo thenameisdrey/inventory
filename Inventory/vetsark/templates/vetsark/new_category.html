@@ -1,0 +1,39 @@
+{% extends 'vetsark/base.html' %}
+{% block content %}
+
+<div class="jumbotron text-center mdb-color lighten white-text z-depth-2">
+        <div class="container">
+          <h1>Add New Category</h1><br>
+          
+        </div>
+</div>
+
+<div class="container" id="stock-bread">
+    <ol class="breadcrumb navbar-dark black">
+        <li class="breadcrumb-item"><a href="{% url 'stock' %}">Stock List</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'addstock' %}">Add New Stock</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'addcategory' %}">Add New Category</a></li>
+    </ol>
+</div>
+</div>
+<div class="container">
+    <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <!-- Default form contact -->
+<form class="text-center border border-light p-5" action="{% url 'addcategory' %}" method="POST" role="form">
+    {% csrf_token %}
+        <p class="h4 mb-4">Add new category</p>
+        {{ form.name }}
+        <br>
+        <!-- Send button -->
+        <button class="btn btn-info btn-block" type="submit">Add Category</button>
+    
+    </form>
+    <!-- Default form contact -->
+    </div>
+    <div class="col-md-3"></div>
+</div>
+</div>
+
+{% endblock %}
